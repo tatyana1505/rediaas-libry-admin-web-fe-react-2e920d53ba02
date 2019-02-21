@@ -1,0 +1,14 @@
+{
+  "contentSchema": {
+    "properties": {
+      "enabled": {
+        "type": "boolean",
+        "default": false
+      },
+      "name": {
+        "$ref": "translation"
+      }
+    },
+    "required": [ "enabled", "name" ]
+  }
+}

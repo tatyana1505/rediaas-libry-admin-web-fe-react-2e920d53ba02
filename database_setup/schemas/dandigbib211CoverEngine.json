@@ -1,0 +1,36 @@
+{
+  "clearance": {
+    "read": "editor",
+    "write": "admin"
+  },
+  "contentSchema": {
+    "properties": {
+      "user": {
+        "type": "string"
+      },
+      "group": {
+        "type": "string"
+      },
+      "password": {
+        "type": "string"
+      }
+    }
+  },
+  "layoutSchema": {
+    "order": [ "user", "group", "password" ],
+    "properties": {
+      "user": {
+        "field": "input",
+        "translation": "TRANSLATION_ID"
+      },
+      "group": {
+        "field": "input",
+        "translation": "TRANSLATION_ID"
+      },
+      "password": {
+        "field": "input",
+        "translation": "TRANSLATION_ID"
+      }
+    }
+  }
+}

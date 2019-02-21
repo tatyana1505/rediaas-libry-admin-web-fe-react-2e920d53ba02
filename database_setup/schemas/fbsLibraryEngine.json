@@ -1,0 +1,40 @@
+{
+  "contentSchema": {
+    "properties": {
+      "isil": {
+        "type": "string"
+      },
+      "password": {
+        "type": "string"
+      },
+      "url": {
+        "type": "string",
+        "default": "https://cicero-fbs.com/rest"
+      },
+      "username": {
+        "type": "string"
+      }
+    }
+  },
+  "layoutSchema": {
+    "order": [ "url", "isil", "username", "password" ],
+    "properties": {
+      "isil": {
+        "field": "input",
+        "translation": "TRANSLATION_ID"
+      },
+      "password": {
+        "field": "password",
+        "translation": "TRANSLATION_ID"
+      },
+      "url": {
+        "field": "input",
+        "translation": "TRANSLATION_ID"
+      },
+      "username": {
+        "field": "input",
+        "translation": "TRANSLATION_ID"
+      }
+    }
+  }
+}

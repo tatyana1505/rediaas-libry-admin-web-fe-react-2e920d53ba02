@@ -1,0 +1,186 @@
+{
+  "clearance": {
+    "read": "editor",
+    "write": "admin"
+  },
+  "contentSchema": {
+    "properties": {
+      "name": {
+        "type": "string"
+      },
+      "locked": {
+        "type": "boolean",
+        "default": false
+      },
+      "code": {
+        "type": "string"
+      },
+      "codeUsed": {
+        "type": "boolean",
+        "default": false
+      },
+      "fingerPrint": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "timeZone": {
+        "type": "string",
+        "default": "Europe/Copenhagen"
+      },
+      "branchId": {
+        "type": "string"
+      },
+      "color": {
+        "type": "string"
+      },
+      "modules": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "payment": {
+        "$ref": "butlerMobilepayPos"
+      },
+      "sortBins": {
+        "type": "object",
+        "properties": {
+          "default": {
+            "type": "integer"
+          },
+          "bins": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "binKey": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "sip2CheckinErrors": {
+        "type" : "object",
+        "patternProperties": {
+          "^[A-Z0-9_]*$": {
+            "type" : "object",
+            "patternProperties": {
+              "^[A-Z0-9_]*$":{
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "library": {
+        "$ref": "libraryEngine"
+      },
+      "search": {
+        "$ref": "searchEngine"
+      },
+      "rfid": {
+        "type": {
+          "enum": [ "rfid-reader-1", "rfid-reader-2", "rfid-reader-3", "rfid-reader-4" ]
+        }
+      }
+    },
+    "required": [ "type" ]
+  },
+  "layoutSchema": {
+    "order": [{
+      "type": "h3",
+      "value": {
+        "translation": "TRANSLATION_ID"
+      }
+    },{
+      "type": "section",
+      "order": [
+        {
+          "type": "horizontal",
+          "order": [ "name", "code" ]
+        },{
+          "type": "horizontal",
+          "order": [ "name", "code" ]
+        }
+      ]
+    },{
+      "type": "section_horizontal",
+      "order": [ "name", "code" ]
+    },{
+      "type": "section_horizontal",
+      "order": [ "branchId", "color" ]
+    },{
+      "type": "section_vertical",
+      "order": [ "library", "search" ]
+    }],
+    "properties": {
+      "name": {
+        "field": "input",
+        "translation": "TRANSLATION_ID"
+      },
+      "code": {
+        "field": "readonly",
+        "translation": "TRANSLATION_ID"
+      },
+      "branchId": {
+        "field": "selector",
+        "dbItems": {
+          "dbPath": "./branches/",
+          "value": "document_id",
+          "translationField": "name"
+        },
+        "translation": "TRANSLATION_ID"
+      },
+      "modules": {
+        "field": "list_of_toggle",
+        "items": [
+          {
+            "value": "checkout",
+            "translation": "TRANSLATION_ID"
+          },
+          {
+            "value": "checkin",
+            "translation": "TRANSLATION_ID"
+          },
+          {
+            "value": "payment",
+            "translation": "TRANSLATION_ID"
+          }
+        ],
+        "translation": "TRANSLATION_ID"
+      },
+      "rfid": {
+        "field": "selector",
+        "items": [
+          {
+            "value": "rfid-reader-1",
+            "translation": "TRANSLATION_ID"
+          },
+          {
+            "value": "rfid-reader-2",
+            "translation": "TRANSLATION_ID"
+          },
+          {
+            "value": "rfid-reader-3",
+            "translation": "TRANSLATION_ID"
+          },
+          {
+            "value": "rfid-reader-4",
+            "translation": "TRANSLATION_ID"
+          }
+        ],
+        "translation": "TRANSLATION_ID"
+      }
+    }
+  }
+}

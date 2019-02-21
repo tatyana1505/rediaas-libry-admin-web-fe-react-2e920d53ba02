@@ -1,0 +1,33 @@
+{
+  "clearance": {
+    "read": "editor",
+    "write": "admin"
+  },
+  "contentSchema": {
+    "properties": {
+      "type": {
+        "type": "string"
+      },
+      "fbs": {
+        "$ref": "fbsLibraryEngine"
+      }
+    },
+    "required": [ "type" ]
+  },
+  "layoutSchema": {
+    "order": [ "type" ],
+    "properties": {
+      "type": {
+        "field": "selector_schema",
+        "items": [
+          {
+            "id": "fbs",
+            "schema": "fbsLibraryEngine",
+            "translation": "TRANSLATION_ID"
+          }
+        ],
+        "translation": "TRANSLATION_ID"
+      }
+    }
+  }
+}

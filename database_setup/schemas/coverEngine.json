@@ -1,0 +1,33 @@
+{
+  "clearance": {
+    "read": "editor",
+    "write": "admin"
+  },
+  "contentSchema": {
+    "properties": {
+      "type": {
+        "type": "string"
+      },
+      "dandigbib": {
+        "$ref": "dandigbibCoverEngine"
+      }
+    },
+    "required": [ "type" ]
+  },
+  "layoutSchema": {
+    "order": [ "type" ],
+    "properties": {
+      "type": {
+        "field": "selector_schema",
+        "items": [
+          {
+            "id": "dandigbib",
+            "schema": "dandigbibCoverEngine",
+            "translation": "TRANSLATION_ID"
+          }
+        ],
+        "translation": "TRANSLATION_ID"
+      }
+    }
+  }
+}

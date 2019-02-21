@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "libry-configuration",
+    "dev": "libry-dev"
+  }
+}

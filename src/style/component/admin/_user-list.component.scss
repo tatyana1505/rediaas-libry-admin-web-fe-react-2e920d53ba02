@@ -1,0 +1,25 @@
+.user-list-component {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  
+  .user-list-component-item {
+    display: flex;
+    cursor: pointer;
+    padding:4px;
+    .div-33 {
+      width: 33%;
+    }
+    .div-23 {
+      width: 23%;
+    }
+    .div-11 {
+      display: flex;
+      justify-content: center;
+      width: 11%;
+    }
+  }:hover {
+    background: $light-grey-background;
+  }
+
+}

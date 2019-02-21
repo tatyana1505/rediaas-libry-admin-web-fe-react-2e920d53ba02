@@ -1,0 +1,33 @@
+{
+  "clearance": {
+    "read": "editor",
+    "write": "admin"
+  },
+  "contentSchema": {
+    "properties": {
+      "type": {
+        "type": "string"
+      },
+      "openSearch": {
+        "$ref": "openSearchSearchEngine"
+      }
+    },
+    "required": [ "type" ]
+  },
+  "layoutSchema": {
+    "order": [ "type" ],
+    "properties": {
+      "type": {
+        "field": "selector_schema",
+        "items": [
+          {
+            "id": "openSearch",
+            "schema": "openSearchSearchEngine",
+            "translation": "TRANSLATION_ID"
+          }
+        ],
+        "translation": "TRANSLATION_ID"
+      }
+    }
+  }
+}

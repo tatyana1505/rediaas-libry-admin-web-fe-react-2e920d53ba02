@@ -1,0 +1,31 @@
+.units-for-branch-list {
+  margin: 0 0 32px 0;
+  h1 {
+    font: $light 22px $roboto;
+    color: $light-text-color;
+    padding: 0 0 16px 0;
+  }
+
+  .branch-title-wrapper {
+    display: flex;
+  }
+
+  .add-unit-button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0 64px 0;
+  }
+
+  .no-units-for-branch-wrapper {
+    display: flex;
+    // background: lime;
+    justify-content: center;
+    border: 1px dashed $lighter-text-color;
+    padding: 16px;
+
+    label {
+      font: $light 16px $roboto;
+      color: $light-text-color;
+    }
+  }
+}

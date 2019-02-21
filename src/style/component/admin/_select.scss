@@ -1,0 +1,100 @@
+.Select-placeholder {
+  @extend .Select-value;
+  padding: 10px 18px;
+  width: 100%;
+}
+
+.select-option {
+  width: 100%;
+  padding: 10px 18px;
+}
+
+.Select {
+  height: 40px;
+}
+
+.Select-control {
+  display: flex;
+  align-items: center;
+  border: none;
+  box-shadow: none !important;
+  -webkit-box-shadow: none;
+  margin-bottom: 10px;
+}
+
+.Select-multi-value-wrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Select-value, .Select-value--multi {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.Select-value-label {
+  margin: 0 0 0 8px;
+}
+
+.Select-multi-value-wrapper {
+  width: 100%;
+}
+
+.Select-single-value-wrapper {
+  width: 100%;
+}
+
+.Select-menu-outer {
+  margin-top: 1px;  
+  // font: $light 14px $montserrat;
+  // color: $text-color-dark;
+}
+.Select--single > .Select-control .Select-value {
+  line-height: 34px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.Select-input {
+  height: 34px;
+  margin-top: 3px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.Select-menu-outer {
+  box-sizing: border-box;
+  margin-top: -1px;
+}
+
+.Select--multi.has-value .Select-input {
+  margin-left: 0px;
+}
+.Select--multi .Select-value {
+  margin-left: 0px;
+
+}
+.Select--multi .Select-input {
+  margin-left: 0px;
+}
+.Select-input {
+  display: inline-flex !important;
+  padding: 0;
+  height: 50px;
+}
+
+.Select-placeholder,
+.Select--single > .Select-control .Select-value {
+  color: rgb(0, 0, 0);
+}
+
+.Select-menu div {
+  box-sizing: content-box;
+}
+
+.Select-placeholder {
+  opacity: 0.42;
+  color: rgb(0, 0, 0) !important;  
+}

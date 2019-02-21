@@ -1,0 +1,21 @@
+{
+  "contentSchema": {
+    "oneOf": [
+      {
+        "type": "object",
+        "properties": {
+          "translation": {
+            "type": "string"
+          }
+        }
+      }, {
+        "type": "object",
+        "patternProperties": {
+          "^[a-z]{3}$": {
+            "type": "string"
+          }
+        }
+      }
+    ]
+  }
+}

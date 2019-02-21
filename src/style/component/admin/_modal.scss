@@ -1,0 +1,51 @@
+
+.modal-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: white;
+  box-shadow: 2px 5px 10px #5a5a5a;
+}
+
+.modal-padding {
+  padding-left: 125px;
+  padding-right: 125px;
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.modal-content {
+  width: 500px;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-title {
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 40px;
+  align-self: center;
+}
+
+.choose-role-wrapper {
+  padding-top: 33px;
+}
+
+.modal-element-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.modal-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.modal-error {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}

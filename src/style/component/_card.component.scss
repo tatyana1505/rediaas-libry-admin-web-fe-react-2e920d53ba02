@@ -1,0 +1,16 @@
+.card-wrapper {
+  padding: 32px;
+  margin: 0 0 16px 0;
+  background: $white-background;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
+  padding: 12px 0;
+  font: $regular 16px $roboto;
+  color: $lighter-text-color;
+}
+
+.card-content-wrapper {
+  margin: 0 0 16px 0;
+}

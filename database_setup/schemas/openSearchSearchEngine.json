@@ -1,0 +1,33 @@
+{
+  "clearance": {
+    "read": "editor",
+    "write": "admin"
+  },
+  "contentSchema": {
+    "properties": {
+      "version": {
+        "type": "string"
+      },
+      "v50b35": {
+        "$ref": "openSearchV50B35SearchEngine"
+      }
+    },
+    "required": [ "version" ]
+  },
+  "layoutSchema": {
+    "order": [ "version" ],
+    "properties": {
+      "version": {
+        "field": "selector_schema",
+        "items": [
+          {
+            "id": "v50b35",
+            "schema": "openSearchV50B35SearchEngine",
+            "translation": "TRANSLATION_ID"
+          }
+        ],
+        "translation": "TRANSLATION_ID"
+      }
+    }
+  }
+}

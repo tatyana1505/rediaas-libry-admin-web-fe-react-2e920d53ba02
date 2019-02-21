@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "firebase-admin": "^6.5.1",
+    "promptly": "^3.0.3"
+  }
+}

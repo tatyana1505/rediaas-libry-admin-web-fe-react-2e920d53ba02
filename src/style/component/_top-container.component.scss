@@ -1,0 +1,28 @@
+.top-container {
+  background: $dark-blue-background;
+  min-height: 192px;
+  padding: 0 0 0 366px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .top-title-container {
+    display: flex;
+    align-self: flex-start;
+    flex-grow: 1;
+
+    h1 {
+      display: flex;
+      align-self: center;
+      font: $light 34px $roboto;
+      color: $white-text-color !important;
+      padding: 0;
+    }
+  }
+
+  .tab-bar-container {
+    height: 48px;
+    align-self: flex-start;
+    justify-content: flex-end;
+  }
+}

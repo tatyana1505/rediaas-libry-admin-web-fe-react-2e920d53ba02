@@ -1,0 +1,29 @@
+{
+  "clearance": {
+    "read": "editor",
+    "write": "admin"
+  },
+  "contentSchema": {
+    "properties": {
+      "agency": {
+        "type": "string"
+      },
+      "profile": {
+        "type": "string"
+      }
+    }
+  },
+  "layoutSchema": {
+    "order": [ "agency", "profile" ],
+    "properties": {
+      "agency": {
+        "field": "input",
+        "translation": "TRANSLATION_ID"
+      },
+      "profile": {
+        "field": "input",
+        "translation": "TRANSLATION_ID"
+      }
+    }
+  }
+}

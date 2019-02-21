@@ -1,0 +1,57 @@
+{
+  "clearance": {
+    "read": "editor",
+    "write": "admin"
+  },
+  "contentSchema": {
+    "properties": {
+      "type": {
+        "type": "string"
+      },
+      "mobilepaypospayment": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "string"
+          },
+          "V08": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "poSId": {
+                "type": "string"
+              },
+              "locationId": {
+                "type": "string"
+              },
+              "poSUnitId": {
+                "type": "string"
+              }
+            },
+            "required": [ "name", "poSId", "locationId", "poSUnitId" ]
+          },
+          "required": [ "version" ]
+        }
+      }
+    },
+    "required": [ "type" ]
+  },
+  "layoutSchema": {
+    "order": [ "type" ],
+    "properties": {
+      "type": {
+        "field": "selector_schema",
+        "items": [
+          {
+            "id": "dandigbib",
+            "schema": "dandigbibCoverEngine",
+            "translation": "TRANSLATION_ID"
+          }
+        ],
+        "translation": "TRANSLATION_ID"
+      }
+    }
+  }
+}

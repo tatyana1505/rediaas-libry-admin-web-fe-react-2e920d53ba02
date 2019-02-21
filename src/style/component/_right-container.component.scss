@@ -1,0 +1,42 @@
+.right-container {
+  padding: 52px 116px;
+  flex-direction: column;
+  width: 100%;
+
+  h1 {
+    font: $light 34px $roboto;
+    color: $coral-red;
+    padding: 0 0 62px 0;
+  }
+}
+
+.color-box {
+  align-self: flex-end;
+  margin: 0 20px 8px 0;
+  width: 75px;
+  height: 29px;
+  border: 1px solid $dark-text-color;
+  display: block
+}
+
+.add-branch-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 32px 0;
+}
+
+.choose-customer-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.add-branch-no-button-wrapper {
+  display: block;
+  margin: 16px 0 0 0;
+}
+
+.add-new-branch-button-wrapper {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,64 @@
+{
+  "clearance": {
+    "read": "editor",
+    "write": "admin"
+  },
+  "contentSchema": {
+    "properties": {
+      "identityColor": {
+        "type": "string"
+      },
+      "keyboardType": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "numberOfCharactersInPasswords": {
+        "type": "integer"
+      }
+    },
+    "required": [ "identityColor", "keyboardType", "name", "numberOfCharactersInPasswords" ]
+  },
+  "layoutSchema": {
+    "order": [
+      {
+        "order": [ "name", "identityColor" ],
+        "type": "section_horizontal"
+      },
+      {
+        "order": [ "numberOfCharactersInPasswords", "keyboardType" ],
+        "type": "section_horizontal"
+      }
+    ],
+    "properties": {
+      "identityColor": {
+        "field": "colorPicker",
+        "translation": "TRANSLATION_ID"
+      },
+      "keyboardType": {
+        "field": "selector",
+        "items": [
+          {
+            "id": "normal",
+            "translation": "TRANSLATION_ID"
+          },
+          {
+            "id": "numerical",
+            "translation": "TRANSLATION_ID"
+          }
+        ],
+        "translation": "TRANSLATION_ID"
+      },
+      "name": {
+        "field": "input",
+        "translation": "TRANSLATION_ID"
+      },
+      "numberOfCharactersInPasswords": {
+        "field": "selector",
+        "items": [ 4, 5, 6, 8, 16 ],
+        "translation": "TRANSLATION_ID"
+      }
+    }
+  }
+}
